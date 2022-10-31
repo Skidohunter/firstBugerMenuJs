@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 40px;
+}
+
+#burger {
+  width: 30px;
+  height: 2px;
+  background: white;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#burger::before,
+#burger::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: white;
+  display: inline-block;
+  position: absolute;
+}
+
+#burger::before {
+  top: -7px;
+}
+
+#burger::after {
+  top: 7px;
+}
+
+header {
+  max-width: auto;
+  background-image: url(../images/1253915.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+}
+
+ul {
+  background-color: gray;
+  color: black;
+  width: 15%;
+  top: 30px;
+  padding: 10px 0;
+  position: absolute;
+  -webkit-animation: navAnimation 1s;
+          animation: navAnimation 1s;
+}
+
+@-webkit-keyframes navAnimation {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes navAnimation {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0%;
+  }
+}
+ul li {
+  padding: 10px 0;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+.displayNone {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
