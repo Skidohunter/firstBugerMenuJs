@@ -204,28 +204,25 @@ else {
 // QUIZ-2//
 let input = document.getElementById("saisons");
 let answer = document.getElementById("answerSelect");
-let messageTrue;
-let messageFalse;
+const messageTrue = "VRAI";
+const messageFalse = "FAUX";
 let submitq = document.getElementById('submit-q');
 let spanResponseq = document.getElementById('quizResponse');
 
 // AU CLICK JE DECLENCHE MA FCT LEGAL//
 submitq.addEventListener('click',answers);
-submitq.addEventListener('click',saison);
+submitq.addEventListener('dblclick',saison);
 // FCT LEGAL QUI DETERMINE LA MAJORTIE ET LE MESSAGE A AFFICHER//
 function answers(){
     if(answer.value === "5") {
-        messageFalse = " FAUX"
         spanResponseq.innerHTML = messageFalse;
         spanResponseq.classList.add('red');
         spanResponseq.classList.remove('green');
     } else if (answer.value === "8"){
-       messageTrue = "VRAI"
        spanResponseq.innerHTML = messageTrue;
        spanResponseq.classList.add('green');
        spanResponseq.classList.remove('red');
     } else if (answer.value === "3"){
-        messageFalse = " FAUX"
         spanResponseq.innerHTML = messageFalse;
         spanResponseq.classList.add('red');
         spanResponseq.classList.remove('green');
@@ -234,19 +231,16 @@ function answers(){
 
 function saison(){
     if(input.value === "8"){
-        messageTrue = "VRAI"
         spanResponseq.innerHTML = messageTrue;
         spanResponseq.classList.add('green');
         spanResponseq.classList.remove('red');
     }
     if(input.value <"8"){
-        messageFalse = "FAUX"
         spanResponseq.innerHTML = messageFalse;
         spanResponseq.classList.add('red');
         spanResponseq.classList.remove('green');
     }
     if(input.value >"8"){
-        messageFalse = "FAUX"
         spanResponseq.innerHTML = messageFalse;
         spanResponseq.classList.add('red');
         spanResponseq.classList.remove('green');
