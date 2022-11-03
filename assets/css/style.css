@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -53,7 +54,7 @@ header {
   background-image: url(../images/1253915.jpg);
   background-position: center;
   background-size: cover;
-  height: 120vh;
+  height: 80vh;
 }
 
 ul {
@@ -94,4 +95,173 @@ ul li {
 
 .displayNone {
   display: none;
+}
+
+#age {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(../images/house-of-the-dragon-game-of-thrones-hbo-series-2022-series-2880x1800-7810.jpg);
+  height: 50vh;
+  background-position: center;
+  background-size: contain;
+}
+#age h2 {
+  color: white;
+  font-size: 3rem;
+}
+#age #submit {
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: #81390F;
+  font-weight: bold;
+}
+#age #ages {
+  height: 20px;
+  width: 100px;
+  text-align: center;
+}
+#age label {
+  color: white;
+}
+
+.green {
+  color: green;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#quiz {
+  background-image: url(../images/wallpapersden.com_house-of-the-dragon-hd-season-1_2560x1440.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  width: auto;
+}
+
+.panel {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-container {
+  margin: 10px;
+  padding: 5px;
+  width: 40vw;
+  height: 5vh;
+  background-color: #555636;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.result {
+  margin: 10px;
+  padding: 5px;
+  width: 80vw;
+  height: 10vh;
+  text-align: center;
+  font-size: 50px;
+}
+
+.option-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+  width: 80vw;
+  height: 20vh;
+  background-color: #555636;
+}
+
+.option {
+  padding: 10px;
+  width: 10vw;
+  height: 10vh;
+  font-size: larger;
+  background-color: #81390f;
+  border-radius: 50%;
+}
+
+.option:hover {
+  background-color: #a76841;
+  border: solid 5px black;
+  color: white;
+}
+
+.navigation {
+  width: 30vw;
+  height: 10vh;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.evaluate, .next {
+  width: 10vw;
+  height: 8vh;
+  padding: 5px;
+  font-size: larger;
+  border-radius: 20px;
+}
+
+.evaluate {
+  background-color: #BF3325;
+}
+
+.next {
+  color: white;
+  background-color: crimson;
+}
+
+.evaluate:hover {
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+}
+
+.next:hover {
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+}
+
+#quiz-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#quiz-2 p {
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.green2 {
+  color: green;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.red2 {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

@@ -8,18 +8,66 @@
     <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
+  <!-- SECTION MENU BURGER -->
   <header>
     <nav>
       <a><span id="burger"></span></a>
       <h1>House Of Dragons</h1>
       <ul id="nav" class="displayNone">
         <li><a href="">Accueil</a></li>
-        <li><a href="">Formation</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#age">Age</a></li>
+        <li><a href="#quiz">Quiz</a></li>
       </ul>
     </nav>
-    
-
   </header>
+  <!-- SECTION AGE -->
+  <section>
+    <div id="age">
+      <h2>Votre Age :</h2>
+      <input type="number" placeholder="ici" id="ages">
+      <label for="from">Choose a Country:</label>
+        <select name="country" id="countrySelect">
+          <option value="">Choisir un Pays</option>
+          <option value="fr">France</option>
+          <option value="us">Etats-Unis</option>
+          <option value="jp">Japon</option>
+       </select>
+      <button id="submit" type="submit">click</button>
+      <span id="legalResponse"></span>
+    </div>      
+  </section>
+  <!-- SECTION QUIZ -->
+  <section id="quiz">
+    <div class="panel">
+      <div class="result">
+      </div>
+      <div class="question-container" id="question">
+      </div>
+      <div class="option-container">
+          <button class="option" id="op1" >option1</button>
+          <button class="option" id="op2" >option2</button>
+          <button class="option" id="op3">option3</button>
+          <button class="option" id="op4">option4</button>
+      </div>
+      <div class="navigation">
+          <button class="evaluate">Valider</button>
+          <button class="next">Suivant</button>
+      </div>
+  </div>
+  </section>
+
+  <section id="quiz-2">
+    <p>Combien de saison à Games Of Thrones? </p>
+    <input type="texte" placeholder="?????" id="saisons">
+      <label for="from"></label>
+        <select name="answer" id="answerSelect">
+          <option value="">Choisir une réponse</option>
+          <option value="5">5</option>
+          <option value="3">3</option>
+          <option value="8">8</option>
+       </select>
+      <button id="submit-q" type="submit">click</button>
+      <span id="quizResponse"></span>   
+  </section>
 <script src="assets/js/script.js"></script>
 </html>
