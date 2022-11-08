@@ -264,4 +264,205 @@ ul li {
   color: red;
   font-size: 2rem;
   font-weight: bold;
+}
+
+#time {
+  background-color: #a76841;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+#time p {
+  font-weight: bold;
+  font-size: 3rem;
+}
+#time button {
+  padding: 20px;
+  background-color: aquamarine;
+  transition: 0.3s ease-in-out;
+}
+#time button:hover {
+  background-color: red;
+  font-size: 20px;
+  box-shadow: 10px 10px 10px 0px;
+}
+#time #boum {
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#time .boite {
+  -webkit-animation-name: boumba;
+          animation-name: boumba;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+@-webkit-keyframes boumba {
+  25% {
+    border-radius: 50%;
+    background-color: blue;
+    transform: translate(200px);
+  }
+  50% {
+    border-radius: 0%;
+    transform: translate(-200px);
+    background-color: aquamarine;
+  }
+}
+@keyframes boumba {
+  25% {
+    border-radius: 50%;
+    background-color: blue;
+    transform: translate(200px);
+  }
+  50% {
+    border-radius: 0%;
+    transform: translate(-200px);
+    background-color: aquamarine;
+  }
+}
+
+.heure {
+  width: auto;
+  height: 10vh;
+  background-color: #878C64;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: black;
+  font-size: 2rem;
+}
+.heure button {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #BF3325;
+  color: black;
+  font-weight: bolder;
+}
+.heure button:hover {
+  background-color: red;
+  font-size: 20px;
+  box-shadow: 10px 10px 10px 0px;
+}
+
+#horloge {
+  height: 50vh;
+  background-color: #BF3325;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#chifoumi {
+  height: 90vh;
+  color: white;
+}
+
+img {
+  height: 150px;
+}
+
+.perso {
+  padding-top: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.perso1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.perso2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bubble1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 2rem;
+}
+
+.bubble2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 2rem;
+}
+
+#talkbubble {
+  width: 120px;
+  height: 80px;
+  background: red;
+  border-radius: 10px;
+  position: relative;
+}
+
+#talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid red;
+  border-bottom: 13px solid transparent;
+}
+
+.res1 {
+  color: black;
+}
+
+.res2 {
+  color: black;
+}
+
+#btnNumber {
+  height: 50px;
+  width: 100px;
+  background-color: #a76841;
+  transition: 0.3s ease-in-out;
+}
+
+#btnNumber:hover {
+  box-shadow: 5px 5px 5px 2px;
+  border: 3px solid black;
+  font-size: 2rem;
+}
+
+#score {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.winner {
+  background-color: greenyellow;
 }/*# sourceMappingURL=style.css.map */

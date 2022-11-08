@@ -258,3 +258,187 @@ ul li {
   font-size: 2rem;
   font-weight: bold;
 }
+
+// TIMEOUT//
+#time{
+  background-color: #a76841;
+  height: 50vh;
+  @include flex(center,center,column);
+  gap: 40px;
+
+  p{
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  button{
+    padding: 20px;
+    background-color: aquamarine;
+    transition: 0.3s ease-in-out;
+  }
+
+  button:hover{
+    background-color: red;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px 0px;
+    
+    
+  }
+
+  #boum{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    @include flex;
+
+  }
+  .boite{
+    animation-name: boumba;
+    animation-duration: 12s;
+ 
+  }
+
+  @keyframes boumba {
+    25%{
+      border-radius: 50%;
+      background-color: blue;
+      transform: translate(200px);
+  }
+
+  50%{
+      border-radius: 0%;
+      transform: translate(-200px);
+      background-color: aquamarine;           
+  }  
+  }
+
+  }
+
+  //HEURE//
+
+  .heure{
+    width: auto;
+    height: 10vh;
+    background-color: #878C64;
+    @include flex;
+    color: black;
+    font-size: 2rem;
+    button{
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #BF3325;
+      color: black;
+      font-weight: bolder;
+    }
+    button:hover{
+      background-color: red;
+      font-size: 20px;
+      box-shadow: 10px 10px 10px 0px;
+      
+      
+    }
+  }
+
+  // HORLOGE//
+
+  #horloge{
+    height: 50vh;
+    background-color: #BF3325;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    @include flex;
+    
+  }
+  
+  // CHIFOUMI//
+    #chifoumi{
+      height: 90vh;
+      color: white;
+    }
+
+    img{
+      height: 150px;
+    }
+
+    .perso{
+      padding-top: 350px;
+      @include flex(space-evenly);
+    }
+    .perso1{
+      @include flex;
+      gap: 20px;
+    }
+
+    .perso2{
+      @include flex;
+    
+    }
+
+    .bubble1{
+      @include flex;
+      font-size: 2rem;
+    }
+
+    .bubble2{
+      @include flex;
+      font-size: 2rem;
+    }
+
+ 
+    #talkbubble {
+      width: 120px;
+      height: 80px;
+      background: red;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      position: relative;
+    }
+    #talkbubble:before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 26px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-right: 26px solid red;
+      border-bottom: 13px solid transparent;
+    }
+
+    .res1{
+      color: black;
+    }
+
+    .res2{
+      color: black;
+    }
+
+    #btnNumber{
+      height: 50px;
+      width: 100px;
+      background-color: #a76841;
+      transition: 0.3s ease-in-out;
+    }
+
+    #btnNumber:hover{
+      box-shadow: 5px 5px 5px 2px;
+      border: 3px solid black;
+      font-size: 2rem;
+    }
+
+    #score{
+      color: black;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .winner{
+      background-color: greenyellow;
+    }
+
+    

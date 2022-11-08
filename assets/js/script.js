@@ -36,7 +36,7 @@ function legalCountry(){
         legal = 20;
         messageOn = " それは良いです"
         messageOff = " 若すぎる"
-    } else if (from.value === "us"){
+    } else {
         legal = 21;
         messageOn = " Welcome Dude"
         messageOff = " Go to sleep little child !!"
@@ -247,4 +247,195 @@ function saison(){
     }
 }
 
-  
+// TIMEOUT//
+    //Je declare ma variable timeout//
+    let timeout = document.getElementById("timeOut");
+    //Je declare ma variable counter qui commence à 10//
+    let counter = "?";
+    //Je declare ma variable boum//
+    const boum = document.getElementById("boum");
+    //J'intégre la variable counter a boum//
+    boum.innerText = counter;
+    //Je déclare ma variable nombre//
+    let nombre = document.getElementById("nombre");
+    let reset = document.getElementById("reset")
+
+    //Création des deux méthodes de réactions qui réponde à ma vabiable timeout de mon bouton//
+    timeout.addEventListener('click',diminuerTemps,)
+    timeout.addEventListener('click',anim)
+    reset.addEventListener('click',resetBtn)
+    function diminuerTemps() {
+        boum.innerText = nombre.value
+        nombre.value--
+        if(nombre.value >= 0 ){
+            setTimeout(diminuerTemps, 1000)  
+        }    
+    }
+    function anim () {
+        boum.classList.add('boite');
+        
+    }
+    
+    function resetBtn(){
+        boum.innerHTML = counter;
+        nombre.value = counter;
+        
+    }
+
+    //HEURE STATIQUE//
+
+    let heure = document.querySelector(".heure");
+    let btnH = document.getElementById("btn-heure");
+    btnH.addEventListener('click',static)
+
+    function static(){
+        let today = new Date ();
+        heure.innerHTML = Date ();
+        
+        setTimeout( static,1000);
+    }
+
+        
+    // HORLOGE//
+    function startTime() {
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        m = checkTime(m);
+        let s = today.getSeconds();
+        s = checkTime(s);
+        document.getElementById('horloge').innerHTML = h + ":" + m +":" + s;
+        let t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    
+    startTime();
+
+
+
+    // input pour la valeur temps
+    // un button reset
+    // afficher l'heure (statique) au click d'un button
+
+    // CHIFOUMI//
+
+    let min = 1; 
+    let max = 10; 
+    let timer;  
+    let bubble1 = document.querySelector(".bubble1");
+    let bubble2 = document.querySelector(".bubble2");
+    let perso1 = document.querySelector(".res1");
+    let perso2 = document.querySelector(".res2");
+    let btnNumber = document.getElementById("btnNumber");
+    let resetNumber = document.getElementById("reset2");
+    let score = document.getElementById("score");
+    let score1 = 0;
+    let score2 = 0;
+    btnNumber.addEventListener('click',() => {
+        timer = 3;
+        timers();
+    });
+    resetNumber.addEventListener('click',reset2);
+    
+    function num(){
+        let n = Math.floor(Math.random() * (max - min)) + min; 
+        let n2 = Math.floor(Math.random() * (max - min)) + min; 
+        bubble1.innerHTML = n;
+        bubble2.innerHTML = n2;
+    
+        if (n > n2){
+            perso1.innerHTML = "YOU WIN !!";
+            perso2.innerHTML="";
+            score1++ ;
+            score.innerHTML = score1 + " / " + score2 ;
+            perso1.classList.add("winner");
+ 
+        } else if (n2 > n){
+            perso2.innerHTML = "YOU WIN !!";
+            perso1.innerHTML="";
+            score2++;
+            score.innerHTML = score1 + " / " + score2 ;
+            perso2.classList.add("winner");
+        } else{
+            perso1.innerHTML = "DRAW !!!";
+            perso2.innerHTML = "DRAW !!!";
+            score1++;
+            score2++;
+            score.innerHTML = score1 + " / " + score2;
+            perso1.classList.add("winner");
+            perso2.classList.add("winner");
+            
+        } if (score1 >= 3 || score2 >= 3){
+            score.innerHTML = "FINISH"
+        } 
+             
+        }
+    // Fonction timer qui intégre la fonction num une fois que le chrono arrive à 0
+        function timers() {
+            btnNumber.innerText = timer
+            timer--
+            if(timer >= 0 ){
+                setTimeout(timers, 1000);  
+            } else if(timer <= 0){
+                num();
+            }
+    
+        }
+
+    // Fonction resest qui permet de remettre tout les valeurs à 0//
+    function reset2(){
+        btnNumber.innerHTML = 3;
+        perso1.innerHTML = "";
+        perso2.innerHTML = ""; 
+        bubble1.innerHTML = "";
+        bubble2.innerHTML = "";
+        score.innerHTML="";
+        score1 = 0 ;
+        score2 = 0 ;      
+    }
+
+    /////////////////////////CORRECTION JEUX RANDOM/////////////////////////////////////////////
+
+    //      let btnStart = document.getElemetById("btnStart")
+    //      let player1 = document.getElementById("player1");
+    //      let player2 = document.getElementById("player2");
+    //      btnStart.addEventListener("click",random)
+    //      function random() {
+    //      console.log ("toto");
+    //      console.log(toto * 10);
+    //      console.log(Math.ceil(toto * 10)); //Math.ceil = arrondi au sup.
+    //      console.log(Math.floor(toto * 10)); //Math.floor = arrondi à l'inf.
+
+    //      let randomNumber = Math.ceil(Math.random() * 6) //Math.random = nbre aléatoire inclus entre 0 et 1.
+    //      console(randomNumber);
+
+    //      let randomNumber2 =  Math.ceil(Math.random() * 6)
+    //      console(randomNumber2);
+
+    //      if(randomNumber > randomNumber2){
+    //          player1.innerHTML = randomNumber;
+    //          player2.innerHTML = randomNumber2;
+    //          player1.classList.add("winner")
+    //          player2.classList.remove("winner")
+
+    //      } else if(randomNumber < randomNumber2){
+    //          player2.innerHTML = randomnumber2;
+    //          player1.innerHTML = randomNumber;
+    //          player2.classList.add("winner")
+    //          player1.classList.remove("winner")
+    //          
+    //          
+    //      } else {
+    //          player1.innerHTML = randomnumber + "(draw)";
+    //          player2.innerHTML = randomnumber2 + "(draw)";
+    //          player1.classList.add("winner")
+    //          player2.classList.add("winner")
+    //         
+    //     }
+    // }
+
+        
+
