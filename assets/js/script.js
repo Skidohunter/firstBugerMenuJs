@@ -368,22 +368,32 @@ function saison(){
             perso1.classList.add("winner");
             perso2.classList.add("winner");
             
-        } if (score1 >= 3 || score2 >= 3){
-            score.innerHTML = "FINISH"
-        } 
+        } if (score1 >= 3){
+            perso1.innerHTML = "YOU ARE THE REAL CHAMPIONS";
+            perso2.innerHTML = "NOOB";
+            perso2.classList.remove("winner");
+            perso2.classList.add("red");
+            score.innerHTML ="FINISH";
+        } else if (score2 >= 3){
+            perso2.innerHTML = "YOU ARE THE REAL CHAMPIONS";
+            perso1.innerHTML = "NOOB";
+            perso1.classList.remove("winner")
+            perso1.classList.add("red");
+            score.innerHTML ="FINISH";
+        }
              
         }
     // Fonction timer qui intégre la fonction num une fois que le chrono arrive à 0
-        function timers() {
-            btnNumber.innerText = timer
-            timer--
-            if(timer >= 0 ){
-                setTimeout(timers, 1000);  
-            } else if(timer <= 0){
-                num();
-            }
-    
+    function timers() {
+        btnNumber.innerText = timer
+        timer--
+        if(timer >= 0 ){
+            setTimeout(timers, 1000);  
+        } else if(timer <= 0){
+            num();
         }
+
+    }
 
     // Fonction resest qui permet de remettre tout les valeurs à 0//
     function reset2(){
@@ -402,6 +412,8 @@ function saison(){
     //      let btnStart = document.getElemetById("btnStart")
     //      let player1 = document.getElementById("player1");
     //      let player2 = document.getElementById("player2");
+    //      let count1 = 0;
+    //      let count2 = 0;
     //      btnStart.addEventListener("click",random)
     //      function random() {
     //      console.log ("toto");
@@ -412,30 +424,48 @@ function saison(){
     //      let randomNumber = Math.ceil(Math.random() * 6) //Math.random = nbre aléatoire inclus entre 0 et 1.
     //      console(randomNumber);
 
-    //      let randomNumber2 =  Math.ceil(Math.random() * 6)
+    //      let randomNumber2 =  Math.ceil(Math.random() * 6);
     //      console(randomNumber2);
 
     //      if(randomNumber > randomNumber2){
     //          player1.innerHTML = randomNumber;
     //          player2.innerHTML = randomNumber2;
-    //          player1.classList.add("winner")
-    //          player2.classList.remove("winner")
+    //          player1.classList.add("winner");
+    //          player2.classList.remove("winner");
+    //          count1++;
 
     //      } else if(randomNumber < randomNumber2){
     //          player2.innerHTML = randomnumber2;
     //          player1.innerHTML = randomNumber;
-    //          player2.classList.add("winner")
-    //          player1.classList.remove("winner")
+    //          player2.classList.add("winner");
+    //          player1.classList.remove("winner");
+    //          count2++;
     //          
     //          
     //      } else {
     //          player1.innerHTML = randomnumber + "(draw)";
     //          player2.innerHTML = randomnumber2 + "(draw)";
-    //          player1.classList.add("winner")
-    //          player2.classList.add("winner")
+    //          player1.classList.add("winner");
+    //          player2.classList.add("winner");
+    //          count1++;
+    //          count2++;
     //         
     //     }
     // }
 
-        
+    // EXO BOUCLES//
 
+    for (let i = 1; i< 11; i++) {
+        // console.log(i)
+    }
+    
+   
+    let str = '';
+
+    for (let i = 1; i< 12; i++) {
+        for (let j = 1; j < i; j++) {
+         str += j;
+     }
+      console.log(str);
+    str = '';
+ }
