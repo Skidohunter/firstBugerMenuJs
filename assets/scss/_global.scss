@@ -124,12 +124,12 @@ ul li {
 
 }
 
-  .green{
+  .green2{
     color: green;
     font-size: 2rem;
     font-weight: bold;
   }
-  .red{
+  .red2{
     color: red;
     font-size: 2rem;
     font-weight: bold;
@@ -356,8 +356,9 @@ ul li {
   
   // CHIFOUMI//
     #chifoumi{
-      height: 90vh;
+      height: 80vh;
       color: white;
+
     }
 
     img{
@@ -447,3 +448,178 @@ ul li {
       font-size: 2rem;
     }
     
+
+    //////////////// LES VOITURES///////////////////////////////////////
+    #voitures{
+     background-color: wheat;
+     height: 100vh;
+     padding-top: 50px;
+
+     h1{
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: black;
+      padding-top: 50px;
+     }
+
+     h2{
+      color: black;
+      font-size: 2rem;
+     }
+     
+
+    }
+
+    .articleContainer{
+      @include flex (center,center,row);
+      flex-wrap: wrap;
+      padding-top: 50px;
+      position: relative;
+    
+    }
+
+    .article{
+      @include flex(center,center,column);
+      gap: 20px;
+      background-color: gray;
+      width: 200px;
+      border-radius: 20px;
+      margin: 50px;
+      padding: 50px;
+    }
+
+    .articleBtn{
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .articleBtn:hover{
+      border: solid 5px black;
+    }
+
+  
+    .modal{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translatex(-50%);
+      background-color:black;
+      color: white;
+      padding: 50px;
+      border-radius: 20px;
+      animation: article 1s;
+      font-size: large;
+      text-align: center;
+      
+    }
+
+    .displayNoneVoitures{
+      display: none;
+      
+    }
+
+    .displayNoneBouton{
+      padding: 5px;
+      border-radius: 40px;
+    }
+
+    @keyframes article {
+      from{
+        top: -300%;
+      }
+      to{
+        top:250px,
+      }
+
+      //////////////////// DEUXIEME PAGE HTML LOGIN /////////////////////////////////////////
+      
+    }
+
+    #login{
+      height: 100vh;
+      background-image: url('/assets/images/vroum.jpg');
+      background-position: center;
+      background-size: cover;
+
+     .form{
+      background-color: grey;
+      @include flex(center,center,column);
+      gap: 30px;
+      width: 200px;
+      border-radius: 20px;
+      padding: 50px;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translateX(-50%);
+      
+      p{
+        text-align: center;
+        padding-bottom: 5px;
+      }
+
+      input{
+        padding: 5px;
+      }
+      
+     }
+
+
+    }
+
+    #erreur{
+      color: white;
+      
+    }
+
+    #wesh{
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    // ADMIN//
+
+
+  #admin{
+    background-image: url("../images/605930.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  #adminBtn{
+    @include flex(space-around);
+    gap: 30px;
+    padding-top: 15px;
+
+    button{
+      padding: 10px;
+    }
+    
+ 
+  }
+
+  #usersAdmin{
+    padding-top: 15px;
+    text-align: center;
+    color: gold;
+    font-style: bold;
+    @include flex;
+  }
+
+  #addUsers{
+    padding-top: 15px;
+    @include flex(space-around,center,column);
+    p{
+      text-align: center;
+      font-size: 20px;
+      color: crimson ;
+      font-style: bold;
+    }
+    input{
+      padding: 5px;
+    }
+  }
+  

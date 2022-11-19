@@ -48,12 +48,12 @@ function legalCountry(){
 function popUpAge(){
     if (age.value < legal){
         spanResponse.innerHTML = age.value + ' ans' + messageOff;
-        spanResponse.classList.add('red');
-        spanResponse.classList.remove('green');
+        spanResponse.classList.add('red2');
+        spanResponse.classList.remove('green2');
     } else if (age.value >= legal){
         spanResponse.innerHTML = age.value + ' ans' + messageOn;
-        spanResponse.classList.add('green');
-        spanResponse.classList.remove('red');
+        spanResponse.classList.add('green2');
+        spanResponse.classList.remove('red2');
     } 
 }
 
@@ -352,6 +352,7 @@ function saison(){
             score1++ ;
             score.innerHTML = score1 + " / " + score2 ;
             perso1.classList.add("winner");
+            perso1.classList.remove("red");
  
         } else if (n2 > n){
             perso2.innerHTML = "YOU WIN !!";
@@ -359,6 +360,7 @@ function saison(){
             score2++;
             score.innerHTML = score1 + " / " + score2 ;
             perso2.classList.add("winner");
+            perso2.classList.remove("red");
         } else{
             perso1.innerHTML = "DRAW !!!";
             perso2.innerHTML = "DRAW !!!";
@@ -453,19 +455,95 @@ function saison(){
     //     }
     // }
 
-    // EXO BOUCLES//
 
-    for (let i = 1; i< 11; i++) {
-        // console.log(i)
-    }
+
+// ////////////////////////////////// LES BOUCLES //////////////////////////////////////////
+
+// // for (options){
+//     /*actions
+//     /*
+// }
+
+// // for (repeter jusqua la ligne d'après et arrête toi à la fin du tableau){
+//     /*
+//     afficher le nom
+//     afficher le prenom
+//     /*
+// }
+
+// // Une rep de 10 *
+//     let i;
+
+//     for(i = 0 ; i <=9 ; i++ ){
+//         console.log("toto");
+//     }
+
+
+//     // EXO BOUCLES//
+
+//     for (let i = 0; i< 10; i++) {
+//         console.log(i)
+//     }
     
    
-    let str = '';
+//     let str = '';
 
-    for (let i = 1; i< 12; i++) {
-        for (let j = 1; j < i; j++) {
-         str += j;
-     }
-      console.log(str);
-    str = '';
- }
+//     for (let i = 0; i< 12; i++) {
+//         for (let j = 1; j < i; j++) {
+//          str = str + j;
+//      }
+//         console.log(str);
+//         str = '';
+//  }
+
+// let i;
+
+// for (let i = 0 ; i <=49 ; i++){
+//     console.log("je suis une boucle");
+// }
+
+
+
+    // let i;
+    // let cars = [
+    //     'opel',
+    //     'bmw',
+    //     'merco',
+    //     'audi',
+    //     'ford',
+    //     'nissan',
+    // ];
+
+    // // I <= cars.length permet de calculer la longueur et le nombre de lignes de ma variable 
+    // // cars et du coup de s'adapter automatiquement au nombre d'éléments de mon tableau.
+    
+    // for(let i = 0 ; i < cars.length ; i++){
+    //     console.log(cars[i]);
+    // }
+
+
+    ///////////////////////////// VOITURES////////////////////////////////////////////////
+
+    const btnVoitures = document.querySelectorAll('.articleBtn')
+    const modals = document.querySelectorAll('.modal')
+    const btnCloses = document.querySelectorAll('.displayNoneBouton')
+
+    let numToggledModal = 0;
+
+    for (let i = 0; i < btnVoitures.length; i++){
+        btnVoitures[i].addEventListener('click',() => {
+            closeToggledModal()
+            modals[i].classList.remove('displayNoneVoitures');
+            numToggledModal = i;
+        });
+        // btnCloses[i].addEventListener('click',closeToggledModal);
+    }
+
+    function closeToggledModal() {
+        modals[numToggledModal].classList.add('displayNoneVoitures');
+    }
+                    
+ const prenom = sessionStorage.getItem("prenom01");
+ const nom = sessionStorage.getItem("nom01");
+ document.querySelector("#wesh").innerHTML = "Bienvenue " + prenom + " " + nom;
+ 

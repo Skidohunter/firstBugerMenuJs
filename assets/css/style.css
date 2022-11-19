@@ -128,13 +128,13 @@ ul li {
   color: white;
 }
 
-.green {
+.green2 {
   color: green;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.red {
+.red2 {
   color: red;
   font-size: 2rem;
   font-weight: bold;
@@ -369,7 +369,7 @@ ul li {
 }
 
 #chifoumi {
-  height: 90vh;
+  height: 80vh;
   color: white;
 }
 
@@ -471,4 +471,180 @@ img {
 .red {
   background-color: red;
   font-size: 2rem;
+}
+
+#voitures {
+  background-color: wheat;
+  height: 100vh;
+  padding-top: 50px;
+}
+#voitures h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  padding-top: 50px;
+}
+#voitures h2 {
+  color: black;
+  font-size: 2rem;
+}
+
+.articleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  position: relative;
+}
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: gray;
+  width: 200px;
+  border-radius: 20px;
+  margin: 50px;
+  padding: 50px;
+}
+
+.articleBtn {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.articleBtn:hover {
+  border: solid 5px black;
+}
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translatex(-50%);
+  background-color: black;
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  -webkit-animation: article 1s;
+          animation: article 1s;
+  font-size: large;
+  text-align: center;
+}
+
+.displayNoneVoitures {
+  display: none;
+}
+
+.displayNoneBouton {
+  padding: 5px;
+  border-radius: 40px;
+}
+
+@-webkit-keyframes article {
+  from {
+    top: -300%;
+  }
+  to {
+    top: 250px;
+  }
+}
+
+@keyframes article {
+  from {
+    top: -300%;
+  }
+  to {
+    top: 250px;
+  }
+}
+#login {
+  height: 100vh;
+  background-image: url("/assets/images/vroum.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#login .form {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 200px;
+  border-radius: 20px;
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+#login .form p {
+  text-align: center;
+  padding-bottom: 5px;
+}
+#login .form input {
+  padding: 5px;
+}
+
+#erreur {
+  color: white;
+}
+
+#wesh {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#admin {
+  background-image: url("../images/605930.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#adminBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  padding-top: 15px;
+}
+#adminBtn button {
+  padding: 10px;
+}
+
+#usersAdmin {
+  padding-top: 15px;
+  text-align: center;
+  color: gold;
+  font-style: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#addUsers {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#addUsers p {
+  text-align: center;
+  font-size: 20px;
+  color: crimson;
+  font-style: bold;
+}
+#addUsers input {
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */
